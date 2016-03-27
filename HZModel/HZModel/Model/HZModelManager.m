@@ -96,7 +96,6 @@
  */
 -(void)handelModelArrayValue:(id)value key:(id)key model:(id)model {
     if ([key rangeOfString:@"PbList"].location ==NSNotFound) {
-        
         NSArray *arrayValue =value;
         if (arrayValue.count ==0||arrayValue ==nil) {
             return ;
@@ -131,7 +130,6 @@
         objc_property_t property = properties[i];
         NSString * key = [[NSString alloc]initWithCString:property_getAttributes(property)  encoding:NSUTF8StringEncoding];
         [arrayPropertyAttributes addObject:key];
-        
     }
     free(properties);
     return arrayPropertyAttributes;
