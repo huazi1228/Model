@@ -19,6 +19,8 @@
 		C3CEA3461CA7C4ED00F01365 /* HZModelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CEA3451CA7C4ED00F01365 /* HZModelManager.m */; };
 		C3CEA3491CA7C6A000F01365 /* NSString+GetModelProperyAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CEA3481CA7C6A000F01365 /* NSString+GetModelProperyAttribute.m */; };
 		C3CEA34D1CA7D67000F01365 /* jsonfile.txt in Resources */ = {isa = PBXBuildFile; fileRef = C3CEA34C1CA7D67000F01365 /* jsonfile.txt */; };
+		D598D06E1CB3528900C23C64 /* modelMapping.plist in Resources */ = {isa = PBXBuildFile; fileRef = D598D06D1CB3528900C23C64 /* modelMapping.plist */; };
+		D598D0701CB35E5800C23C64 /* jsonfile2.txt in Resources */ = {isa = PBXBuildFile; fileRef = D598D06F1CB35E5800C23C64 /* jsonfile2.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,8 @@
 		C3CEA3471CA7C6A000F01365 /* NSString+GetModelProperyAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+GetModelProperyAttribute.h"; sourceTree = "<group>"; };
 		C3CEA3481CA7C6A000F01365 /* NSString+GetModelProperyAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+GetModelProperyAttribute.m"; sourceTree = "<group>"; };
 		C3CEA34C1CA7D67000F01365 /* jsonfile.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = jsonfile.txt; sourceTree = "<group>"; };
+		D598D06D1CB3528900C23C64 /* modelMapping.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = modelMapping.plist; sourceTree = "<group>"; };
+		D598D06F1CB35E5800C23C64 /* jsonfile2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = jsonfile2.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,12 +160,14 @@
 			isa = PBXGroup;
 			children = (
 				C3CEA34C1CA7D67000F01365 /* jsonfile.txt */,
+				D598D06F1CB35E5800C23C64 /* jsonfile2.txt */,
 				C3CEA3411CA7C3D600F01365 /* NSJSONSerialization+Transform.h */,
 				C3CEA3421CA7C3D600F01365 /* NSJSONSerialization+Transform.m */,
 				C3CEA3471CA7C6A000F01365 /* NSString+GetModelProperyAttribute.h */,
 				C3CEA3481CA7C6A000F01365 /* NSString+GetModelProperyAttribute.m */,
 				C3CEA3441CA7C4ED00F01365 /* HZModelManager.h */,
 				C3CEA3451CA7C4ED00F01365 /* HZModelManager.m */,
+				D598D06D1CB3528900C23C64 /* modelMapping.plist */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -272,6 +278,8 @@
 				C3CEA31D1CA7C22200F01365 /* LaunchScreen.storyboard in Resources */,
 				C3CEA31A1CA7C22200F01365 /* Assets.xcassets in Resources */,
 				C3CEA34D1CA7D67000F01365 /* jsonfile.txt in Resources */,
+				D598D0701CB35E5800C23C64 /* jsonfile2.txt in Resources */,
+				D598D06E1CB3528900C23C64 /* modelMapping.plist in Resources */,
 				C3CEA3181CA7C22200F01365 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -526,6 +534,7 @@
 				C3CEA3391CA7C22200F01365 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C3CEA33A1CA7C22200F01365 /* Build configuration list for PBXNativeTarget "HZModelTests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +543,7 @@
 				C3CEA33C1CA7C22200F01365 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C3CEA33D1CA7C22200F01365 /* Build configuration list for PBXNativeTarget "HZModelUITests" */ = {
 			isa = XCConfigurationList;
@@ -542,6 +552,7 @@
 				C3CEA33F1CA7C22200F01365 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

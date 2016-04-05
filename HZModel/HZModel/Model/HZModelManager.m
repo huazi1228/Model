@@ -84,7 +84,7 @@
         }
         return arrayModels;
     }
-    //    DLog(@"数据格式错误，该返回array");
+    DLog(@"数据格式错误，该返回array");
     return arrayModels;
 }
 /**
@@ -105,7 +105,7 @@
         return ;
     }
     NSString *strClassName =[[key substringToIndex:[key rangeOfString:@"PbList"].location] stringChangeFirstchar];
-    id newvalues =[self returnArrayModelWithArray:value AndClassName:strClassName];
+    id newvalues =[self returnArrayModelExtendWithArray:value AndClassName:strClassName];
 //    key =[key stringByAppendingString:@"Array"];
     [model setValue:[newvalues mutableCopy] forKey:key];
     return ;
@@ -134,5 +134,91 @@
     free(properties);
     return arrayPropertyAttributes;
 }
+-(id)returnModelExtendWithDic:(NSDictionary *)dic AndClassName:(NSString *)strClassName {
+    NSString *path =[NSBundle pathForResource:@"modelMapping" ofType:@"plist" inDirectory:[[NSBundle mainBundle] bundlePath]];
+    NSArray *modelMapping =[[NSArray alloc] initWithContentsOfFile:path];
+    __block NSDictionary *dicModelMapping =nil;
+    __block id returnModel =nil;
+    [modelMapping enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if ([[obj objectForKey:@"className"] isEqualToString:strClassName]) {
+            dicModelMapping =[obj objectForKey:@"modelMapping"];
+            returnModel =[self returnModelExtendWithDic:dic AndClassName:strClassName AndModelMapping:dicModelMapping];
+            *stop =YES;
+        }
+    }];
+    if (returnModel) {
+       return returnModel;
+    }
+    return [self returnModelWithDic:dic AndClassName:strClassName];
+}
+-(id)returnModelExtendWithDic:(NSDictionary *)dic AndClassName:(NSString *)strClassName AndModelMapping:(NSDictionary *)modelMapping {
+    id model =[[NSClassFromString(strClassName) alloc] init];
+    NSMutableArray* allProperys =[self returnPropertysWithClassName:strClassName];
+    NSMutableArray* allProperyAttributes =[self returnPropertysTypeWithClassName:strClassName];
+    if (![dic isKindOfClass:[NSDictionary class]]&&![dic isKindOfClass:[NSMutableDictionary class]]) {
+        return nil;
+    }
+    if (allProperys.count>0 &&[dic allKeys].count>0) {
+        for (NSInteger i=0; i<[dic allKeys].count; i++) {
+            NSString *key =[[dic allKeys] objectAtIndex:i];
+            id value =[[dic allValues] objectAtIndex:i];
+            DLog(@"%@",NSStringFromClass([value superclass]));
+            key =[modelMapping objectForKey:key];
+            if (key==nil) {
+                DLog(@"modelMapping不匹配===%@",strClassName);
+                continue;
+            }
+            if (![allProperys containsObject:key]) {  //model中不存在Dic中的这个属性
+                continue ;
+            }
+            if ([NSStringFromClass([value superclass]) isEqualToString:@"NSMutableArray"]||[NSStringFromClass([value superclass]) isEqualToString:@"NSArray"]) {
+                [self handelModelArrayValue:value key:key model:model];
+                continue;
+            }
+            if ([NSStringFromClass([value superclass]) isEqualToString:@"NSMutableDictionary"]||[NSStringFromClass([value superclass]) isEqualToString:@"NSDictionary"]) {
+                NSString *strClassName =[[key substringToIndex:[key rangeOfString:@"PbModel"].location] stringChangeFirstchar];
+                id newvalues =[self returnModelExtendWithDic:value AndClassName:strClassName];
+                [model setValue:newvalues forKey:key];
+                continue ;
+            }
+            
+            NSInteger indexValue =[allProperys indexOfObject:key];
+            DLog(@"%@",[allProperyAttributes objectAtIndex:indexValue]);
+            if ([[NSString stringWithFormat:@"%@",value] isEqualToString:@"<null>"]||[[NSString stringWithFormat:@"%@",value] isEqualToString:@"null"]) {
+                continue;
+            }
+            if ([[allProperyAttributes objectAtIndex:indexValue] hasPrefix:@"Ti"]) {
+                DLog(@"%@",[NSString stringWithFormat:@"%@",value]);
+                if ([[NSString stringWithFormat:@"%@",value] isEqualToString:@"<null>"]||[[NSString stringWithFormat:@"%@",value] isEqualToString:@"null"]) {
+                    continue;
+                }
+                NSNumber *number =[NSNumber numberWithInt:[value intValue]];
+                [model setValue:number forKey:key];
+                continue;
+            }
+            
+            [model setValue:value forKey:key];
+        }
+    }
+    return model;
+}
+-(id)returnArrayModelExtendWithArray:(NSArray *)models AndClassName:(NSString *)strClassName {
+    NSMutableArray *arrayModels =[[NSMutableArray alloc] init];
+    if ([NSStringFromClass([models superclass]) isEqualToString:@"NSMutableArray"]||[NSStringFromClass([models superclass]) isEqualToString:@"NSArray"]) {
+        if (models&&models.count >0) {
+            for (NSInteger i=0; i<models.count; i++) {
+                id object =[models objectAtIndex:i];
+                DLog(@"%@",NSStringFromClass([object superclass]));
+                if ([NSStringFromClass([object superclass]) isEqualToString:@"NSDictionary"]||[NSStringFromClass([object superclass]) isEqualToString:@"NSMutableDictionary"]) {
+                    id model =[self returnModelExtendWithDic:object AndClassName:strClassName];
+                    [arrayModels addObject:model];
+                }
+            }
+        }
+        return arrayModels;
+    }
+    DLog(@"数据格式错误，该返回array");
+    return arrayModels;
 
+}
 @end

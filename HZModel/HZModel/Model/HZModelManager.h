@@ -51,4 +51,24 @@
  *  @return 类里面的属性类型数组
  */
 -(NSMutableArray *)returnPropertysTypeWithClassName:(NSString *)strClassName;
+
+
+/**
+ *  返回一个Model数据    这里会对一个ModelMap.plist  数组里面查看是否包含当前的Model对应的Map（Model类中的字段名和Json中返回的key名称）
+ *
+ *  @param dic          model 对应的Dic
+ *  @param strClassName model 的类名
+ *
+ *  @return 赋好值的model数据
+ */
+-(id)returnModelExtendWithDic:(NSDictionary *)dic AndClassName:(NSString *)strClassName;    //返回一个Model数据
+/**
+ *  返回一个数组Model数据，数组对象类型必须相同   这里会对一个ModelMap.plist
+ *
+ *  @param models      model上 对应的数组
+ *  @param strClassName model 的类名
+ *
+ *  @return 赋好值的model数据
+ */
+-(id)returnArrayModelExtendWithArray:(NSArray *)models AndClassName:(NSString *)strClassName;  //返回一个数组Model数据
 @end

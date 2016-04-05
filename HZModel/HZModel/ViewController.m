@@ -29,6 +29,16 @@
 
 @end
 
+
+@interface Grade : NSObject
+@property (nonatomic, strong)NSArray *studentPbListTotal;  //班级每个学生对象
+@property (nonatomic, strong)Student *studentPbModelLead;  //班长
+@property (nonatomic, copy)NSString *gradeName;
+@end
+@implementation Grade
+
+@end
+
 @interface ViewController ()
 
 @end
@@ -56,6 +66,14 @@
     Hostel *hostel =[[HZModelManager shareModelManager] returnModelWithDic:dicHostel AndClassName:@"Hostel"];
     NSLog(@"%@", hostel);
     
+}
+- (IBAction)btnTestChangeExtend:(id)sender {
+    
+    NSString *strFile =[NSBundle pathForResource:@"jsonfile2" ofType:@"txt" inDirectory:[[NSBundle mainBundle] bundlePath]];
+    NSString *strJson =[[NSString alloc] initWithContentsOfFile:strFile encoding:NSUTF8StringEncoding error:nil];
+    NSDictionary *dicGrade =[NSJSONSerialization returnObjectWithJsonStr:strJson];
+    Grade *grade =[[HZModelManager shareModelManager] returnModelExtendWithDic:dicGrade AndClassName:@"Grade"];
+    NSLog(@"%@", grade);
 }
 
 @end
