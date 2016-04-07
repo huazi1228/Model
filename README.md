@@ -1,5 +1,5 @@
 # Model
-目前暂时只支持JSON数据转成Modle  (已添加根据.number声称model代码)
+目前暂时只支持JSON数据转成Modle  (已添加根据.number生成model代码)
 
 #在什么情况下写的！Model
 * 由于自己公司项目中用的是原先protocolbuffer(以下简称PB)是google 的一种数据交换的格式，使用这种数据在传输过程中比JSON数据传输的更小（由于是由于属性只是一个在类中是按顺序生成的，所以可以将json中的key用1、2等int数据代替）！
