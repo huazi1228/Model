@@ -25,23 +25,33 @@
                                     <action selector="btnTest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wxF-0V-EKc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gW-8y-Z89">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gW-8y-Z89">
                                 <rect key="frame" x="20" y="80" width="280" height="30"/>
                                 <state key="normal" title="JSONToModel(key与Model变量名不一致)"/>
                                 <connections>
                                     <action selector="btnTestChangeExtend:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ntk-IA-nYD"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOW-du-cuA">
+                                <rect key="frame" x="169" y="28" width="70" height="30"/>
+                                <state key="normal" title="buildCode"/>
+                                <connections>
+                                    <action selector="btnBuildCode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4U0-bs-V5y"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="7gW-8y-Z89" firstAttribute="top" secondItem="cOy-VG-hgX" secondAttribute="bottom" constant="22" id="0qz-7x-OLQ"/>
                             <constraint firstItem="cOy-VG-hgX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Awc-XY-DcY"/>
                             <constraint firstItem="cOy-VG-hgX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="HAp-EE-0rU"/>
+                            <constraint firstItem="7gW-8y-Z89" firstAttribute="leading" secondItem="cOy-VG-hgX" secondAttribute="leading" id="m5C-kt-ngL"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="260" y="337"/>
         </scene>
     </scenes>
 </document>

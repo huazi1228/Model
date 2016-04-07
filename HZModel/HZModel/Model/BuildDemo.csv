@@ -1,0 +1,23 @@
+类名,变量名,变量类型 （空默认NSString） arr(NSArray)  int (NSInteger)  bool (BOOL)  arrM(NSMutableArray),备注
+Hostel,,,寝室
+,studentPbListTotal,arr,寝室成员
+,studentPbModelLead,Student,寝室长
+,gradeName,,
+Student,,,学生
+,name,,
+,address,,籍贯
+,age,int,
+Post,,,
+,postid,,帖子对应的id
+,postTag,,帖子对应的标签
+,pcUrl,,帖子对应的PC端的url地址，用于分享，该字段1.0版本暂时不用
+,title,,"帖子的标题,UI只显示1行，显示不了用”…”显示"
+,healthUserPbModel,,"发帖人,服务器只传过用户的id、用户名以及用户级别、用户称号"
+,checkNo,,帖子浏览数，返回”21384”
+,praiseNo,,帖子点赞数，返回”315”
+,createTime,,统一处理10位的时间戳帖子的发帖时间
+,postContent,,帖子的内容，该字段仅在展示PostDetailRequest协议中返回
+,postImageUrls,arr,帖子对应的图片的url地址集合
+,communityName,,(新增用于用户资料中以及我里面的收藏和自己的发帖)帖子所属的圈子名称
+,tagName,,(新增用于用户资料中以及我里面的收藏和自己的发帖)帖子所属的圈子，圈子所在的标签名称  
+,richTextContent,,帖子的内容   html格式的文本（包含文字和图片）当在为帖子详情页面的时候需要返回，其他时候可以不返回

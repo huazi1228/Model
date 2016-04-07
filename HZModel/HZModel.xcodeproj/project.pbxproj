@@ -21,6 +21,15 @@
 		C3CEA34D1CA7D67000F01365 /* jsonfile.txt in Resources */ = {isa = PBXBuildFile; fileRef = C3CEA34C1CA7D67000F01365 /* jsonfile.txt */; };
 		D598D06E1CB3528900C23C64 /* modelMapping.plist in Resources */ = {isa = PBXBuildFile; fileRef = D598D06D1CB3528900C23C64 /* modelMapping.plist */; };
 		D598D0701CB35E5800C23C64 /* jsonfile2.txt in Resources */ = {isa = PBXBuildFile; fileRef = D598D06F1CB35E5800C23C64 /* jsonfile2.txt */; };
+		D598D0731CB3891C00C23C64 /* BuildDemoCodeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D598D0721CB3891C00C23C64 /* BuildDemoCodeManager.m */; };
+		D598D0FE1CB3A0F200C23C64 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D598D0FD1CB3A0F200C23C64 /* libiconv.tbd */; };
+		D5FE910D1CB500E600E9C3AB /* createHTemplate in Resources */ = {isa = PBXBuildFile; fileRef = D5FE910C1CB500E600E9C3AB /* createHTemplate */; };
+		D5FE91101CB6080900E9C3AB /* PropertyTypeMapping.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5FE910F1CB6080900E9C3AB /* PropertyTypeMapping.plist */; };
+		D5FE91131CB65F0000E9C3AB /* BuildDemo.numbers in Resources */ = {isa = PBXBuildFile; fileRef = D5FE91111CB65F0000E9C3AB /* BuildDemo.numbers */; };
+		D5FE91141CB65F0000E9C3AB /* BuildDemo.xls in Resources */ = {isa = PBXBuildFile; fileRef = D5FE91121CB65F0000E9C3AB /* BuildDemo.xls */; };
+		D5FE91171CB661BE00E9C3AB /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = D5FE91161CB661BE00E9C3AB /* Test.m */; };
+		D5FE91191CB661E600E9C3AB /* createMTemplate in Resources */ = {isa = PBXBuildFile; fileRef = D5FE91181CB661E600E9C3AB /* createMTemplate */; };
+		D5FE911B1CB6669D00E9C3AB /* BuildDemo.csv in Resources */ = {isa = PBXBuildFile; fileRef = D5FE911A1CB6669D00E9C3AB /* BuildDemo.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +75,17 @@
 		C3CEA34C1CA7D67000F01365 /* jsonfile.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = jsonfile.txt; sourceTree = "<group>"; };
 		D598D06D1CB3528900C23C64 /* modelMapping.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = modelMapping.plist; sourceTree = "<group>"; };
 		D598D06F1CB35E5800C23C64 /* jsonfile2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = jsonfile2.txt; sourceTree = "<group>"; };
+		D598D0711CB3891C00C23C64 /* BuildDemoCodeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuildDemoCodeManager.h; sourceTree = "<group>"; };
+		D598D0721CB3891C00C23C64 /* BuildDemoCodeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuildDemoCodeManager.m; sourceTree = "<group>"; };
+		D598D0FD1CB3A0F200C23C64 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		D5FE910C1CB500E600E9C3AB /* createHTemplate */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = createHTemplate; sourceTree = "<group>"; };
+		D5FE910F1CB6080900E9C3AB /* PropertyTypeMapping.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PropertyTypeMapping.plist; sourceTree = "<group>"; };
+		D5FE91111CB65F0000E9C3AB /* BuildDemo.numbers */ = {isa = PBXFileReference; lastKnownFileType = file; path = BuildDemo.numbers; sourceTree = "<group>"; };
+		D5FE91121CB65F0000E9C3AB /* BuildDemo.xls */ = {isa = PBXFileReference; lastKnownFileType = file; path = BuildDemo.xls; sourceTree = "<group>"; };
+		D5FE91151CB661BE00E9C3AB /* Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
+		D5FE91161CB661BE00E9C3AB /* Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
+		D5FE91181CB661E600E9C3AB /* createMTemplate */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = createMTemplate; sourceTree = "<group>"; };
+		D5FE911A1CB6669D00E9C3AB /* BuildDemo.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BuildDemo.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D598D0FE1CB3A0F200C23C64 /* libiconv.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +120,7 @@
 				C3CEA30C1CA7C22200F01365 /* HZModel */,
 				C3CEA3261CA7C22200F01365 /* HZModelTests */,
 				C3CEA3311CA7C22200F01365 /* HZModelUITests */,
+				D598D0FC1CB3A0C800C23C64 /* Frameworks */,
 				C3CEA30B1CA7C22200F01365 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -120,6 +142,8 @@
 				C3CEA3111CA7C22200F01365 /* AppDelegate.m */,
 				C3CEA3131CA7C22200F01365 /* ViewController.h */,
 				C3CEA3141CA7C22200F01365 /* ViewController.m */,
+				D5FE91151CB661BE00E9C3AB /* Test.h */,
+				D5FE91161CB661BE00E9C3AB /* Test.m */,
 				C3CEA3401CA7C25700F01365 /* Model */,
 				C3CEA3161CA7C22200F01365 /* Main.storyboard */,
 				C3CEA3191CA7C22200F01365 /* Assets.xcassets */,
@@ -167,9 +191,25 @@
 				C3CEA3481CA7C6A000F01365 /* NSString+GetModelProperyAttribute.m */,
 				C3CEA3441CA7C4ED00F01365 /* HZModelManager.h */,
 				C3CEA3451CA7C4ED00F01365 /* HZModelManager.m */,
+				D598D0711CB3891C00C23C64 /* BuildDemoCodeManager.h */,
+				D598D0721CB3891C00C23C64 /* BuildDemoCodeManager.m */,
 				D598D06D1CB3528900C23C64 /* modelMapping.plist */,
+				D5FE910F1CB6080900E9C3AB /* PropertyTypeMapping.plist */,
+				D5FE91111CB65F0000E9C3AB /* BuildDemo.numbers */,
+				D5FE91121CB65F0000E9C3AB /* BuildDemo.xls */,
+				D5FE911A1CB6669D00E9C3AB /* BuildDemo.csv */,
+				D5FE910C1CB500E600E9C3AB /* createHTemplate */,
+				D5FE91181CB661E600E9C3AB /* createMTemplate */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D598D0FC1CB3A0C800C23C64 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D598D0FD1CB3A0F200C23C64 /* libiconv.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,10 +316,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3CEA31D1CA7C22200F01365 /* LaunchScreen.storyboard in Resources */,
+				D5FE91131CB65F0000E9C3AB /* BuildDemo.numbers in Resources */,
 				C3CEA31A1CA7C22200F01365 /* Assets.xcassets in Resources */,
+				D5FE91191CB661E600E9C3AB /* createMTemplate in Resources */,
+				D5FE911B1CB6669D00E9C3AB /* BuildDemo.csv in Resources */,
+				D5FE910D1CB500E600E9C3AB /* createHTemplate in Resources */,
 				C3CEA34D1CA7D67000F01365 /* jsonfile.txt in Resources */,
 				D598D0701CB35E5800C23C64 /* jsonfile2.txt in Resources */,
+				D5FE91101CB6080900E9C3AB /* PropertyTypeMapping.plist in Resources */,
 				D598D06E1CB3528900C23C64 /* modelMapping.plist in Resources */,
+				D5FE91141CB65F0000E9C3AB /* BuildDemo.xls in Resources */,
 				C3CEA3181CA7C22200F01365 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,7 +352,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3CEA3151CA7C22200F01365 /* ViewController.m in Sources */,
+				D5FE91171CB661BE00E9C3AB /* Test.m in Sources */,
 				C3CEA3491CA7C6A000F01365 /* NSString+GetModelProperyAttribute.m in Sources */,
+				D598D0731CB3891C00C23C64 /* BuildDemoCodeManager.m in Sources */,
 				C3CEA3461CA7C4ED00F01365 /* HZModelManager.m in Sources */,
 				C3CEA3121CA7C22200F01365 /* AppDelegate.m in Sources */,
 				C3CEA3431CA7C3D600F01365 /* NSJSONSerialization+Transform.m in Sources */,
@@ -369,6 +417,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -405,6 +454,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Debug;
 		};
@@ -412,6 +462,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -442,28 +493,36 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Release;
 		};
 		C3CEA3381CA7C22200F01365 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = ../DHxlsReader/DHxlsReader;
 				INFOPLIST_FILE = HZModel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hz.HZModel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Debug;
 		};
 		C3CEA3391CA7C22200F01365 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = ../DHxlsReader/DHxlsReader;
 				INFOPLIST_FILE = HZModel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hz.HZModel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Release;
 		};

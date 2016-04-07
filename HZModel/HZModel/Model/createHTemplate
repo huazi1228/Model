@@ -1,0 +1,11 @@
+#import <Foundation/Foundation.h>
+//@class  引用类
+
+/*=====*/
+//classname
+@interface #classname# : NSObject
+//@property 属性列表
+
+
+/*=====*/
+@end

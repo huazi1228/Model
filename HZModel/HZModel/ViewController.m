@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "HZModelManager.h"
 #import "NSJSONSerialization+Transform.h"
+#import "BuildDemoCodeManager.h"
+
 #define Local_File_path [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject]
 @interface Student : NSObject
 @property (nonatomic, copy)NSString *name;
@@ -74,6 +76,41 @@
     NSDictionary *dicGrade =[NSJSONSerialization returnObjectWithJsonStr:strJson];
     Grade *grade =[[HZModelManager shareModelManager] returnModelExtendWithDic:dicGrade AndClassName:@"Grade"];
     NSLog(@"%@", grade);
+  
+    
+}
+- (IBAction)btnBuildCode:(id)sender {
+    
+    NSString *strFile =[NSBundle pathForResource:@"BuildDemo" ofType:@"csv" inDirectory:[[NSBundle mainBundle] bundlePath]];
+    NSString *strBuild =[[NSString alloc] initWithContentsOfFile:strFile encoding:NSUTF8StringEncoding error:nil];
+    NSLog(@"%@",strBuild);
+    NSArray *arrayClasses =[strBuild componentsSeparatedByString:@"\r\n"];
+    NSLog(@"%@",arrayClasses);
+    NSMutableArray *classNameAndPropertys =[[NSMutableArray alloc] init];
+    NSMutableArray *classNameAndProperty =[[NSMutableArray alloc] init];
+    for (NSInteger i=1; i<arrayClasses.count; i++) {
+        NSArray *arrayItems =[[arrayClasses objectAtIndex:i] componentsSeparatedByString:@","];
+        if (![[arrayItems objectAtIndex:0] isEqualToString:@""]) {  //
+            if (classNameAndProperty.count ==0||classNameAndProperty==nil) {
+                [classNameAndProperty addObject:[arrayClasses objectAtIndex:i]];
+                continue;
+            }
+            [classNameAndPropertys addObject:[classNameAndProperty mutableCopy]];
+            [classNameAndProperty removeAllObjects];
+            [classNameAndProperty addObject:[arrayClasses objectAtIndex:i]];
+            continue ;
+        }
+        [classNameAndProperty addObject:[arrayClasses objectAtIndex:i]];
+    }
+    [classNameAndPropertys addObject:classNameAndProperty];
+    
+    BuildDemoCodeManager *buildCode =[[BuildDemoCodeManager alloc] init];
+    [buildCode build:classNameAndPropertys];
+    
+//    NSDictionary *dicHostel =[NSJSONSerialization returnObjectWithJsonStr:strJson];
+//    Hostel *hostel =[[HZModelManager shareModelManager] returnModelWithDic:dicHostel AndClassName:@"Hostel"];
+//    NSLog(@"%@", hostel);
+
 }
 
 @end

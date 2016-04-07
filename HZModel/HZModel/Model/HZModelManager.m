@@ -219,6 +219,5 @@
     }
     DLog(@"数据格式错误，该返回array");
     return arrayModels;
-
 }
 @end
