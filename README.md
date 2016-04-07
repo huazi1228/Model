@@ -24,7 +24,7 @@
 ========
 * 目前需要服务端按照我们定义好的key返回，后续会给每个Model类加上一个服务端返回NSDic 中的key和Model的成员变量名的一个NSDic来匹配.  (已优化)
 
-* 就是写一个根据JSON 或者NSDic 通过生成相关的Model类的代码. (已优化)
+* 就是写一个根据JSON 或者NSDic 通过生成相关的Model类的代码. (已优化  ps:使用  BuildDemo.number生成对应的 BuildDemo.csv  APP里面解析该字符)
 
 
 
